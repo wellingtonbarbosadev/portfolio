@@ -1,4 +1,4 @@
-import GlassSurface from "../GlassSurface";
+import GlassSurface from "../ReactBits/GlassSurface";
 import "./Header.css";
 
 export function Header() {
@@ -6,7 +6,9 @@ export function Header() {
     <>
       <header>
         <GlassSurface width="100%" borderRadius={20} className="header">
-          <h2>Wellington Barbosa <span>{"{}"}</span></h2>
+          <h2>
+            Wellington Barbosa <span>{"{}"}</span>
+          </h2>
 
           <section className="lowercase flex gap-4">
             <a href="#projetos">Projetos</a>
