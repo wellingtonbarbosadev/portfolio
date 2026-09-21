@@ -1,0 +1,13 @@
+.hero {
+  .slogan {
+    font-family: "JetBrains Mono", monospace;
+
+    color: var(--color-gray-300);
+  }
+
+  .buttonsHero {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
