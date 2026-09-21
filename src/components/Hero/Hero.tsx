@@ -2,6 +2,9 @@ import AnimatedContent from "../ReactBits/AnimatedContent";
 import { DevCard } from "../DevCard/DevCard";
 
 export function Hero() {
+  const slogan =
+    "Cursando Engenharia de Software na UVA. Transito entre front-end e back-end — Java, Spring Boot, Express, React — e gosto de projeto que dá trabalho de resolver.";
+
   return (
     <AnimatedContent
       distance={100}
@@ -17,11 +20,7 @@ export function Hero() {
     >
       <div className="flex flex-col gap-7">
         <DevCard />
-        <p className="slogan">
-          Cursando Engenharia de Software na UVA. Transito entre front-end e
-          back-end — Java, Spring Boot, Express, React — e gosto de projeto que
-          dá trabalho de resolver.
-        </p>
+        <p className="slogan">{slogan}</p>
 
         <section>
           <button>ver projetos</button>
