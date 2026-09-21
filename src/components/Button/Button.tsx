@@ -15,6 +15,8 @@ export function Button({
   const tipoBotao = type === "primario" ? styles.primario : styles.secundario
 
   return (
-    <button className={`${styles.button} ${tipoBotao}`}>{children}</button>
+    <button className={`${styles.button} ${tipoBotao}`} {...rest}>
+      {children}
+    </button>
   );
 }
