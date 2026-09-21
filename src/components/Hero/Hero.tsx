@@ -4,9 +4,12 @@ import { DevCard } from "../DevCard/DevCard";
 import "./Hero.css"
 import { Button } from "../Button/Button";
 
+export const githubLink = "https://github.com/wellingtonbarbosadev"
+
 export function Hero() {
   const slogan =
     "Cursando Engenharia de Software na UVA. Transito entre front-end e back-end — Java, Spring Boot, Express, React — e gosto de projeto que dá trabalho de resolver.";
+
 
   return (
     <AnimatedContent
@@ -26,8 +29,8 @@ export function Hero() {
         <p className="slogan">{slogan}</p>
 
         <section className="buttonsHero">
-          <Button type="primario">ver projetos</Button>
-          <Button>GitHub</Button>
+          <Button href="#projetos" type="primario">ver projetos</Button>
+          <Button link={githubLink}>GitHub</Button>
         </section>
       </div>
       <div className="image"></div>
