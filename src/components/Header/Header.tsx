@@ -1,13 +1,17 @@
+import { useState } from "react";
+
 import GlassSurface from "../ReactBits/GlassSurface";
 import "./Header.css";
 
 export function Header() {
+  const [nome] = useState("Wellington Barbosa")
+
   return (
     <>
-      <header>
+      <header className="headerContainer">
         <GlassSurface width="100%" borderRadius={20} className="header">
           <h2>
-            Wellington Barbosa <span>{"{}"}</span>
+            {nome} <span>{"{}"}</span>
           </h2>
 
           <section className="lowercase flex gap-4">

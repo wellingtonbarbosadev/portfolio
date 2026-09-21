@@ -1,24 +1,24 @@
-
-header {
+header.headerContainer {
   position: fixed;
-  
+
   margin-inline: auto;
-  top: .5rem;
+  top: 0.5rem;
   left: 0;
   right: 0;
   width: 98%;
 
+  z-index: 9999;
+
   font-family: "JetBrains Mono", monospace;
-  
+
   .header {
-    
     .glass-surface__content {
       display: flex;
       align-items: center;
       padding-inline: 1rem;
       /* background-color: rgba(0, 0, 0, 0.811); */
       border-radius: 20px;
-      
+
       color: white;
 
       justify-content: space-between;

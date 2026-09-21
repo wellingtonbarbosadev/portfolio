@@ -15,7 +15,7 @@ export function Hero() {
       threshold={0.1}
       delay={0}
     >
-      <div>
+      <div className="flex flex-col gap-7">
         <DevCard />
         <p className="slogan">
           Cursando Engenharia de Software na UVA. Transito entre front-end e

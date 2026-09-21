@@ -60,8 +60,11 @@
 }
 
 :root {
-  --background: oklch(0.15 0.015 260); /* Fixed typo */
+  --background: #080b12; /* Fixed typo */
+  --background-devcard: #10141b;
   --foreground: oklch(0.985 0 0); /* Added standard light mode foreground */
+
+  --purple: #bd96fe;
   font-optical-sizing: auto;
 }
 
