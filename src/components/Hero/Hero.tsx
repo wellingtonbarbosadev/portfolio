@@ -4,6 +4,8 @@ import { DevCard } from "../DevCard/DevCard";
 import "./Hero.css";
 import { Button } from "../Button/Button";
 
+import fotoPerfil from "../../assets/foto.jpeg";
+
 export const githubLink = "https://github.com/wellingtonbarbosadev";
 
 export function Hero() {
@@ -36,7 +38,7 @@ export function Hero() {
         </section>
       </div>
       <div className="image flex flex-1 justify-center">
-        <img src="src/assets/foto.jpeg" alt="foto de perfil" />
+        <img src={fotoPerfil} alt="foto de perfil" />
       </div>
     </AnimatedContent>
   );
