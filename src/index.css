@@ -123,8 +123,13 @@ body {
 }
 
 #root {
-  margin-top: 96px;
   padding-inline: 2rem;
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding-inline: 1rem;
+  }
 }
 
 a, button {
