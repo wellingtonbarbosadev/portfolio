@@ -14,7 +14,7 @@ export function DevCard() {
     },
     {
       chave: "local",
-      valor: "Rio da Janeiro, RJ",
+      valor: "Rio de Janeiro, RJ",
     },
     {
       chave: "status",
