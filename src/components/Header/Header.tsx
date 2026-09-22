@@ -13,12 +13,13 @@ export function Header() {
             {NOME} <span>{"{}"}</span>
           </h2>
 
-          <section className="lowercase flex gap-4">
+          <nav className="lowercase flex gap-4">
             <a href="#projetos">Projetos</a>
             <a href="#formacao">Formação</a>
             <a href="#certificados">Certificados</a>
             <a href="#contato">Contato</a>
-          </section>
+          </nav>
+          
         </GlassSurface>
       </header>
     </>

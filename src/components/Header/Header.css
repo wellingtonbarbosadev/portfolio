@@ -37,6 +37,25 @@ header.headerContainer {
     }
   }
 
+  nav {
+
+    &:has(a:hover) a:not(:hover) {
+      opacity: .5;
+    }
+  }
+
+  a {
+    transition: all .2s ease;
+
+
+    &:hover {
+      transform: scale(1.2);
+      padding-inline: .5rem;
+    }
+
+    
+  }
+
   @media (max-width: 640px) {
     .header .glass-surface__content {
       justify-content: center;

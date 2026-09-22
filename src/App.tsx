@@ -3,11 +3,13 @@ import { Hero } from "./components/Hero/Hero";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import "./App.css"
+
 function LandingPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="mainContainer">
         <Hero />
       </main>
     </>
