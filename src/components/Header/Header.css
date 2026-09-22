@@ -38,41 +38,53 @@ header.headerContainer {
   }
 
   nav {
-
     &:has(a:hover) a:not(:hover) {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 
   a {
-    transition: all .2s ease;
-
+    transition: all 0.2s ease;
 
     &:hover {
       transform: scale(1.2);
-      padding-inline: .5rem;
+      padding-inline: 0.5rem;
     }
 
-    
+    &:focus {
+      padding: unset;
+      transform: unset;
+    }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 540px) {
     .header .glass-surface__content {
       justify-content: center;
+      height: fit-content;
       text-align: center;
+      gap: unset;
+
+      a {
+        opacity: 0.7;
+      }
+    }
+
+    .headerContainer {
+      background-color: aqua;
+      height: 200px;
     }
 
     .header h2 {
       font-size: 1rem;
     }
 
-    .header section {
+    .header nav {
       flex-wrap: wrap;
       justify-content: center;
-      row-gap: 0.5rem;
+      row-gap: 0.1rem;
     }
 
-    .header section a {
+    .header nav a {
       font-size: 0.85rem;
     }
   }
