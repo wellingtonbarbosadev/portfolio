@@ -10,8 +10,7 @@ export const githubLink = "https://github.com/wellingtonbarbosadev";
 
 export function Hero() {
   const slogan =
-    "Cursando Engenharia de Software na UVA. Transito entre front-end e back-end — Java, Spring Boot, Express, React — e gosto de projeto que dá trabalho de resolver.";
-
+    "Sou estudante de Engenharia de Software e busco minha primeira oportunidade de estágio em Desenvolvimento Web. Venho desenvolvendo projetos próprios voltados para Back-end e APIs REST, utilizando tecnologias como Node.js, TypeScript, Express, React, Prisma ORM, PostgreSQL, Java e Spring Boot. Entre os projetos que desenvolvi estão sistemas com autenticação JWT, controle de permissões, gerenciamento de tarefas, pedidos e estoque, sempre aplicando boas práticas de organização, validação e integração com banco de dados. Tenho facilidade para aprender novas tecnologias, gosto de resolver problemas e estou constantemente estudando e evoluindo por meio de cursos e projetos práticos. Acredito que posso contribuir com dedicação, aprendizado rápido, trabalho em equipe e vontade de crescer profissionalmente, ajudando a empresa no desenvolvimento de soluções e na evolução dos projetos da equipe."
   return (
     <AnimatedContent
       distance={100}
