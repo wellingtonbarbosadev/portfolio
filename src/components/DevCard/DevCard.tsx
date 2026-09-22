@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./DevCard.css";
 
 type Linha = { chave: string; valor: string };
@@ -21,6 +22,31 @@ export function DevCard() {
       valor: "open_to_work",
     },
   ];
+  const [nome, setNome] = useState("");
+
+  useEffect(() => {
+    setTimeout(() => {console.log("teste");
+    }, 10000);
+    
+    const linhaNome = LINHAS.find((linha) => linha.chave === "nome");
+    if (!linhaNome) return;
+
+    const nomeSeparado = linhaNome.valor.split("");
+    let index = 0;
+
+    const intervalId = setInterval(() => {
+      if (index < nomeSeparado.length) {
+        const letra = nomeSeparado[index];
+        setNome((prev) => prev + letra);
+
+        index++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 200);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <section className="devCard block">
@@ -40,7 +66,7 @@ export function DevCard() {
                 {linha.chave}
                 <span className="divisor">:</span>{" "}
                 <span>
-                  {linha.valor}
+                  {linha.chave === "nome" ? nome : linha.valor}
                   {LINHAS[index + 1] && <span className="virgula">,</span>}
                 </span>
               </p>
