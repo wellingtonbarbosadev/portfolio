@@ -6,8 +6,19 @@ import { Marquee } from "./components/Marquee/Marquee";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import { SectionContent } from "./components/SectionContent/SectionContent";
 
-const tecnologias = ["Java", "Spring Boot", "Node.js", "TypeScript", "Python", "Flask", "React", "PostgreSQL", "SQLite"];
+const tecnologias = [
+  "Java",
+  "Spring Boot",
+  "Node.js",
+  "TypeScript",
+  "Python",
+  "Flask",
+  "React",
+  "PostgreSQL",
+  "SQLite",
+];
 
 function LandingPage() {
   return (
@@ -17,10 +28,14 @@ function LandingPage() {
         <Hero />
 
         <section className="tecnologias">
-          <Marquee
-            items={tecnologias}
-          />
+          <Marquee items={tecnologias} />
         </section>
+
+        <SectionContent
+          titleHeader="projetos"
+          title="Projetos que construí"
+          titleColor="roxo"
+        ></SectionContent>
       </main>
     </>
   );
