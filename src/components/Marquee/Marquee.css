@@ -11,14 +11,15 @@
 .marqueeTrack {
   display: flex;
   width: max-content;
-  animation-name: marquee-scroll;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  will-change: transform;
 }
 
-/* .marquee:hover .marqueeTrack {
-  animation-play-state: paused;
-} */
+.marqueeTrack.dragging {
+  cursor: grabbing;
+}
 
 .marqueeItem {
   flex-shrink: 0;
@@ -29,21 +30,7 @@
   color: #ffffff;
 
   margin-left: 1rem;
-
+  font-size: 1rem;
   font-family: "JetBrains Mono", monospace;
 }
 
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* @media (prefers-reduced-motion: reduce) {
-  .marqueeTrack {
-    animation: none;
-  }
-} */

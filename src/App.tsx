@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 
+const tecnologias = ["Java", "Spring Boot", "Node.js", "TypeScript", "Python", "Flask", "React", "PostgreSQL", "SQLite"];
+
 function LandingPage() {
   return (
     <>
@@ -16,7 +18,7 @@ function LandingPage() {
 
         <section className="tecnologias">
           <Marquee
-            items={["Java", "Spring Boot", "Node.js", "TypeScript", "Python", "Flask", "React", "PostgreSQL", "SQLite"]}
+            items={tecnologias}
           />
         </section>
       </main>
