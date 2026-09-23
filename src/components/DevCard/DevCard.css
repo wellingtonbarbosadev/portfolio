@@ -12,6 +12,8 @@ section.devCard {
     gap: 0.5rem;
     padding: 1rem;
 
+    border-bottom: 1px solid #e1e3e715;
+
     div {
       border-radius: 50%;
 

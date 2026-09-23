@@ -124,7 +124,7 @@ const GlassSurface = ({
   }, [width, height]);
 
   useEffect(() => {
-    setSvgSupported(supportsSVGFilters());
+    setSvgSupported(false);
   }, []);
 
   const supportsSVGFilters = () => {
