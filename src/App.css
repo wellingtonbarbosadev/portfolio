@@ -2,3 +2,33 @@
   max-width: 1200px;
   margin-inline: auto;
 }
+
+html {
+  overflow-x: hidden;
+}
+
+.mainContainer {
+  section + section {
+    margin-block: 2rem;
+  }
+
+  .tecnologias {
+    background-color: rgba(0, 0, 0, 0.554);
+    width: 100vw;
+    height: 60px;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow-y: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    .marquee {
+      font-size: 1.5rem;
+    }
+  }
+}

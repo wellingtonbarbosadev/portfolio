@@ -1,9 +1,11 @@
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 
+import { Marquee } from "./components/Marquee/Marquee";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import "./App.css"
+import "./App.css";
 
 function LandingPage() {
   return (
@@ -11,6 +13,12 @@ function LandingPage() {
       <Header />
       <main className="mainContainer">
         <Hero />
+
+        <section className="tecnologias">
+          <Marquee
+            items={["Java", "Spring Boot", "Node.js", "TypeScript", "Python", "Flask", "React", "PostgreSQL", "SQLite"]}
+          />
+        </section>
       </main>
     </>
   );
