@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import "./Marquee.css";
+import AnimatedContent from "../ReactBits/AnimatedContent";
 
 interface MarqueeProps {
   items: string[];
@@ -97,16 +98,30 @@ export function Marquee({ items, separator = "✦", speed = 60 }: MarqueeProps) 
   }, [speed, content]);
 
   return (
-    <div className="marquee">
-      <div ref={trackRef} className="marqueeTrack">
-        <span className="marqueeItem">{content}</span>
-        <span className="marqueeItem" aria-hidden="true">
-          {content}
-        </span>
-        <span className="marqueeItem" aria-hidden="true">
-          {content}
-        </span>
+    <AnimatedContent
+      distance={10000}
+      direction="horizontal"
+      reverse={false}
+      duration={0.8}
+      ease="power3.out"
+      initialOpacity={0}
+      animateOpacity
+      scale={1}
+      threshold={0.1}
+      delay={0.4}
+      className="marqueeContent"
+    >
+      <div className="marquee">
+        <div ref={trackRef} className="marqueeTrack">
+          <span className="marqueeItem">{content}</span>
+          <span className="marqueeItem" aria-hidden="true">
+            {content}
+          </span>
+          <span className="marqueeItem" aria-hidden="true">
+            {content}
+          </span>
+        </div>
       </div>
-    </div>
+    </AnimatedContent>
   );
 }

@@ -18,7 +18,7 @@ function LandingPage() {
       <main className="mainContainer">
         <Hero />
 
-        <section className="tecnologias">
+        <section className="tecnologias overflow-hidden">
           <Marquee items={tecnologias} />
         </section>
 
