@@ -8,9 +8,9 @@ html {
 }
 
 .mainContainer {
-  section + section {
-    margin-block: 2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   .tecnologias {
     background-color: rgba(0, 0, 0, 0.554);
@@ -31,4 +31,16 @@ html {
       font-size: 1.5rem;
     }
   }
+}
+
+.containerProjetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: stretch;
+
+  height: 100%;
+
+  /* align-items: center; */
+
+  gap: 1rem;
 }

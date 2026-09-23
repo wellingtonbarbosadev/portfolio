@@ -1,4 +1,48 @@
 .tecnologiasCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: var(--background-devcard);
-  padding: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  border: 1px solid oklch(0.28 0.02 260);
+
+  font-family: "JetBrains Mono", monospace;
+
+  gap: .5rem;
+
+  h3 {
+    color: var(--purple);
+    font-weight: bold;
+  }
+
+  .tecnologias {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    height: 28px;
+
+    span {
+      display: flex;
+
+      align-items: center;
+
+      background-color: color-mix(in srgb, var(--green) 20%, transparent);
+      color: var(--green);
+
+      height: 100%;
+
+      text-align: center;
+
+      padding-inline: 0.5rem;
+
+      font-size: 11.5px;
+      font-weight: bold;
+
+      border-radius: 5px;
+    }
+  }
 }

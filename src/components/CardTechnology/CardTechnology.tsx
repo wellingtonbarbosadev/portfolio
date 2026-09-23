@@ -1,13 +1,26 @@
-import styles from "./CardTechnology.module.css"
+import styles from "./CardTechnology.module.css";
 
-export function CardTechnology() {
-  return <section className={styles.tecnologiasCard}>
-    <h3>title</h3>
-    <p>descricao</p>
+type CardTechnologyProps = {
+  title: string;
+  descricao: string;
+  tecnologias: string[];
+};
 
-    <section className={styles.tecnologias}>
-      <span>TypeScript</span>
-      <span>React</span>
+export function CardTechnology({
+  title,
+  descricao,
+  tecnologias,
+}: CardTechnologyProps) {
+  return (
+    <section className={styles.tecnologiasCard}>
+      <h3>{title}</h3>
+      <p>{descricao}</p>
+
+      <section className={styles.tecnologias}>
+        {tecnologias.map((tecnologia) => (
+          <span>{tecnologia}</span>
+        ))}
+      </section>
     </section>
-  </section>
+  );
 }

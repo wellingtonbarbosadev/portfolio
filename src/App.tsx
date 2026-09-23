@@ -21,6 +21,27 @@ const tecnologias = [
   "SQLite",
 ];
 
+const projetos = [
+  {
+    title: "helpdesk",
+    descricao:
+      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
+    tecnologiasUsadas: ["TypeScript", "Node.js"],
+  },
+  {
+    title: "refund-v2",
+    descricao:
+      "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação.",
+    tecnologiasUsadas: ["TypeScript"],
+  },
+  {
+    title: "helpdesk",
+    descricao:
+      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
+    tecnologiasUsadas: ["TypeScript", "Node.js"],
+  },
+];
+
 function LandingPage() {
   return (
     <>
@@ -37,7 +58,15 @@ function LandingPage() {
           title="Projetos que construí"
           titleColor="roxo"
         >
-          <CardTechnology />
+          <section className="containerProjetos">
+            {projetos.map((projeto) => (
+              <CardTechnology
+                title={projeto.title}
+                descricao={projeto.descricao}
+                tecnologias={projeto.tecnologiasUsadas}
+              />
+            ))}
+          </section>
         </SectionContent>
       </main>
     </>
