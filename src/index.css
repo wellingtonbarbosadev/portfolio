@@ -65,8 +65,8 @@
   --foreground: oklch(0.985 0 0); /* Added standard light mode foreground */
 
   --purple: #bd96fe;
-  --orange: oklch(0.72 0.15 40)
-  --green: oklch(0.72 0.15 140)
+  --orange: oklch(0.72 0.15 40);
+  --green: oklch(0.72 0.15 140);
   font-optical-sizing: auto;
 }
 
