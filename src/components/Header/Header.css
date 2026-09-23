@@ -5,12 +5,20 @@ header.headerContainer {
   top: 0.5rem;
   left: 0;
   right: 0;
-  width: 98%;
+  /* width: 98%; */
+
+  margin-bottom: 2rem;
 
   z-index: 9999;
 
   font-family: "JetBrains Mono", monospace;
 
+  .glass-surface--fallback {
+    border: unset;
+    outline: unset;
+
+    background: rgba(255, 255, 255, 0.028);
+  }
   .header {
     .glass-surface__content {
       display: flex;
@@ -21,6 +29,7 @@ header.headerContainer {
       padding-inline: 1rem;
       padding-block: 0.75rem;
       /* background-color: rgba(0, 0, 0, 0.811); */
+      border: unset;
       border-radius: 20px;
 
       color: white;
@@ -57,21 +66,18 @@ header.headerContainer {
     }
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 740px) {
     .header .glass-surface__content {
       justify-content: center;
       height: fit-content;
       text-align: center;
       gap: unset;
 
+      flex-direction: column;
+
       a {
         opacity: 0.7;
       }
-    }
-
-    .headerContainer {
-      background-color: aqua;
-      height: 200px;
     }
 
     .header h2 {
