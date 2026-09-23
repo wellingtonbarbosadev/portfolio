@@ -25,27 +25,35 @@ export function DevCard() {
   const [nome, setNome] = useState("");
 
   useEffect(() => {
-    setTimeout(() => {console.log("teste");
+    setTimeout(() => {
+      console.log("teste");
     }, 10000);
-    
+
     const linhaNome = LINHAS.find((linha) => linha.chave === "nome");
     if (!linhaNome) return;
 
     const nomeSeparado = linhaNome.valor.split("");
     let index = 0;
 
-    const intervalId = setInterval(() => {
-      if (index < nomeSeparado.length) {
-        const letra = nomeSeparado[index];
-        setNome((prev) => prev + letra);
+    let intervalId: ReturnType<typeof setInterval>;
+    const timeoutId = setTimeout(() => {
+      intervalId = setInterval(() => {
+        if (index < nomeSeparado.length) {
+          const letra = nomeSeparado[index];
+          setNome((prev) => prev + letra);
 
-        index++;
-      } else {
-        clearInterval(intervalId);
-      }
-    }, 200);
+          index++;
+        } else {
+          clearInterval(intervalId);
+          clearTimeout(timeoutId);
+        }
+      }, 80);
+    }, 1000);
 
-    return () => clearInterval(intervalId);
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
@@ -62,13 +70,11 @@ export function DevCard() {
           <span className="text-gray-300">dev</span> = <span>{"{"}</span>
           <section className="devCardContent_info">
             {LINHAS.map((linha, index) => (
-              <p className="linha" key={linha.chave}>
+              <p className={`linha ${linha.chave}`} key={linha.chave}>
                 {linha.chave}
                 <span className="divisor">:</span>{" "}
-                <span>
-                  {linha.chave === "nome" ? nome : linha.valor}
-                  {LINHAS[index + 1] && <span className="virgula">,</span>}
-                </span>
+                <span>{linha.chave === "nome" ? nome : linha.valor}</span>
+                {LINHAS[index + 1] && <span className="virgula">,</span>}
               </p>
             ))}
           </section>

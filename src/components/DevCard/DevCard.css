@@ -72,3 +72,30 @@ section.devCard {
     }
   }
 }
+
+p.nome {
+  color: #ceaa3e;
+
+  span:not(.virgula):not(.divisor) {
+    &::after {
+      content: "_";
+
+      margin-inline: 2px;
+
+      animation: respirar 1s infinite ease;
+    }
+  }
+}
+
+@keyframes respirar {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
