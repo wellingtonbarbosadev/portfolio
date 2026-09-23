@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import { SectionContent } from "./components/SectionContent/SectionContent";
+import { CardTechnology } from "./components/CardTechnology/CardTechnology";
 
 const tecnologias = [
   "Java",
@@ -35,7 +36,9 @@ function LandingPage() {
           titleHeader="projetos"
           title="Projetos que construí"
           titleColor="roxo"
-        ></SectionContent>
+        >
+          <CardTechnology />
+        </SectionContent>
       </main>
     </>
   );
