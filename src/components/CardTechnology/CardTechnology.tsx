@@ -1,5 +1,7 @@
 import styles from "./CardTechnology.module.css";
 
+import {MoveUpRight} from "lucide-react"
+
 type CardTechnologyProps = {
   title: string;
   descricao: string;
@@ -13,6 +15,7 @@ export function CardTechnology({
 }: CardTechnologyProps) {
   return (
     <section className={styles.tecnologiasCard}>
+      <MoveUpRight size={16}/>
       <h3>{title}</h3>
       <p>{descricao}</p>
 
