@@ -9,7 +9,7 @@ import "./App.css";
 import { SectionContent } from "./components/SectionContent/SectionContent";
 import { CardTechnology } from "./components/CardTechnology/CardTechnology";
 import { projetos, tecnologias } from "./shared/data";
-
+import { LinhaFormacao } from "./components/LinhaFormacao/LinhaFormacao";
 
 function LandingPage() {
   return (
@@ -35,6 +35,19 @@ function LandingPage() {
                 tecnologias={projeto.tecnologias}
               />
             ))}
+          </section>
+        </SectionContent>
+
+        <SectionContent
+          titleHeader="formação"
+          title="De onde eu venho"
+          titleColor="laranja"
+        >
+          <section className="containerFormacao">
+            <LinhaFormacao
+              periodo="2025 - 2029"
+              instituicao={{ nome: "teste", detalhes: "teste2" }}
+            />
           </section>
         </SectionContent>
       </main>

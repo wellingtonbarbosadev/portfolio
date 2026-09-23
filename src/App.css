@@ -10,7 +10,7 @@ html {
 .mainContainer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3.5rem;
 
   .tecnologias {
     background-color: rgba(0, 0, 0, 0.554);
