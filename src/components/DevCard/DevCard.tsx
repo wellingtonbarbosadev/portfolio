@@ -1,34 +1,14 @@
 import { useEffect, useState } from "react";
 import "./DevCard.css";
+import { LINHAS } from "../../shared/data";
 
-type Linha = { chave: string; valor: string };
+
 
 export function DevCard() {
-  const LINHAS: Linha[] = [
-    {
-      chave: "nome",
-      valor: "Wellington Barbosa",
-    },
-    {
-      chave: "cargo",
-      valor: "Desenvolvedor FullStack",
-    },
-    {
-      chave: "local",
-      valor: "Rio de Janeiro, RJ",
-    },
-    {
-      chave: "status",
-      valor: "open_to_work",
-    },
-  ];
+  
   const [nome, setNome] = useState("");
 
   useEffect(() => {
-    setTimeout(() => {
-      console.log("teste");
-    }, 10000);
-
     const linhaNome = LINHAS.find((linha) => linha.chave === "nome");
     if (!linhaNome) return;
 

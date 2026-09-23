@@ -5,8 +5,7 @@ import "./Hero.css";
 import { Button } from "../Button/Button";
 
 import fotoPerfil from "../../assets/foto.jpeg";
-
-export const githubLink = "https://github.com/wellingtonbarbosadev";
+import { usuario } from "../../shared/data";
 
 export function Hero() {
   const slogan =
@@ -34,7 +33,7 @@ export function Hero() {
             <Button href="#projetos" type="primario">
               ver projetos
             </Button>
-            <Button link={githubLink}>GitHub</Button>
+            <Button link={usuario.github}>GitHub</Button>
           </section>
         </div>
         <div className="image flex flex-1 justify-center">

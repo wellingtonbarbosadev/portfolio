@@ -1,4 +1,4 @@
-import { githubLink } from "../Hero/Hero";
+import { usuario } from "../../shared/data";
 import styles from "./Button.module.css";
 
 type ButtonProps = React.HTMLAttributes<HTMLAnchorElement> & {
@@ -21,7 +21,7 @@ export function Button({
   return (
     <a
       href={link}
-      target={link === githubLink ? "_blank" : "_self"}
+      target={link === usuario.github ? "_blank" : "_self"}
       className={`${styles.button} ${tipoBotao}`}
       {...rest}
     >

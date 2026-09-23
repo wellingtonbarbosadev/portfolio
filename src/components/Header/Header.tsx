@@ -1,7 +1,6 @@
+import { usuario } from "../../shared/data";
 import GlassSurface from "../ReactBits/GlassSurface";
 import "./Header.css";
-
-const NOME = "Wellington Barbosa"
 
 export function Header() {
 
@@ -10,7 +9,7 @@ export function Header() {
       <header className="headerContainer">
         <GlassSurface width="100%" borderRadius={20} className="header">
           <h2>
-            {NOME} <span>{"{}"}</span>
+            {usuario.nome} <span>{"{}"}</span>
           </h2>
 
           <nav className="lowercase flex gap-4">

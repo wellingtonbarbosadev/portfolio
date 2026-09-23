@@ -8,39 +8,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { SectionContent } from "./components/SectionContent/SectionContent";
 import { CardTechnology } from "./components/CardTechnology/CardTechnology";
+import { projetos, tecnologias } from "./shared/data";
 
-const tecnologias = [
-  "Java",
-  "Spring Boot",
-  "Node.js",
-  "TypeScript",
-  "Python",
-  "Flask",
-  "React",
-  "PostgreSQL",
-  "SQLite",
-];
-
-const projetos = [
-  {
-    title: "helpdesk",
-    descricao:
-      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
-    tecnologiasUsadas: ["TypeScript", "Node.js"],
-  },
-  {
-    title: "refund-v2",
-    descricao:
-      "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação.",
-    tecnologiasUsadas: ["TypeScript"],
-  },
-  {
-    title: "helpdesk",
-    descricao:
-      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
-    tecnologiasUsadas: ["TypeScript", "Node.js"],
-  },
-];
 
 function LandingPage() {
   return (
@@ -63,7 +32,7 @@ function LandingPage() {
               <CardTechnology
                 title={projeto.title}
                 descricao={projeto.descricao}
-                tecnologias={projeto.tecnologiasUsadas}
+                tecnologias={projeto.tecnologias}
               />
             ))}
           </section>
