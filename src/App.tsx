@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { SectionContent } from "./components/SectionContent/SectionContent";
 import { CardTechnology } from "./components/CardTechnology/CardTechnology";
-import { projetos, tecnologias } from "./shared/data";
+import { projetos, tecnologias, usuario } from "./shared/data";
 import { LinhaFormacao } from "./components/LinhaFormacao/LinhaFormacao";
 
 function LandingPage() {
@@ -44,10 +44,14 @@ function LandingPage() {
           titleColor="laranja"
         >
           <section className="containerFormacao">
-            <LinhaFormacao
-              periodo="2025 - 2029"
-              instituicao={{ nome: "teste", detalhes: "teste2" }}
-            />
+            {usuario.formacao.map((formacao) => {
+              return (
+                <LinhaFormacao
+                  periodo={formacao.periodo}
+                  instituicao={formacao.instituicao}
+                />
+              );
+            })}
           </section>
         </SectionContent>
       </main>

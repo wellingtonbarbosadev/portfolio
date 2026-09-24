@@ -1,6 +1,6 @@
 import styles from "./LinhaFormacao.module.css";
 
-type FormacaoType = {
+export type FormacaoType = {
   periodo: string;
 
   instituicao: {
@@ -15,8 +15,8 @@ export function LinhaFormacao(formacao: FormacaoType) {
       <span className="flex-1">{formacao.periodo}</span>
 
       <section className="flex-3">
-        <strong>{formacao.instituicao.nome}</strong>
-        <p>{formacao.instituicao.detalhes}</p>
+        <strong>{formacao.instituicao.detalhes}</strong>
+        <p>{formacao.instituicao.nome}</p>
       </section>
     </section>
   );
