@@ -71,7 +71,7 @@ html {
   justify-content: space-between;
 
   background-color: var(--background-devcard);
-  padding: 2rem;
+  padding: 1.7rem;
   border-radius: 1rem;
 
   border: 1px solid oklch(0.28 0.02 260);
@@ -82,6 +82,10 @@ html {
 
   gap: 0.5rem;
   transition: all .3s ease;
+
+  @media (max-width: 650px) {
+    padding: 1rem;
+  }
 
   &:hover {
     border: 1px solid var(--purple);
