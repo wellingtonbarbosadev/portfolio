@@ -47,12 +47,26 @@ export const usuario: Usuario = {
   status: "open_to_work",
   formacao: [
     {
-      periodo: "2025 - 2029",
+      periodo: "jun. 2025 - jun. 2029",
       instituicao: {
         nome: "Universidade Veiga de Almeida (UVA) - Rio de Janeiro.",
         detalhes: "Engenharia de Software",
       },
     },
+    {
+      periodo: "mai. 2026 - fev. 2027",
+      instituicao: {
+        nome: "FIRJAN Senai - Programa Autonomia e Renda",
+        detalhes: "Programador Full-Stack"
+      }
+    },
+    {
+      periodo: "contínuo",
+      instituicao: {
+        nome: "Cursos e prática constante em back-end, front-end e boas práticas de código.",
+        detalhes: "Estudo Autodidata"
+      }
+    }
   ],
   github: "https://github.com/wellingtonbarbosadev",
   linkedin: "https://linkedin.com/in/wellingtoncbarbosa",
