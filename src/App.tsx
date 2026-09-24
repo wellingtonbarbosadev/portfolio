@@ -1,18 +1,17 @@
-import { Header } from "./components/Header/Header";
-import { Hero } from "./components/Hero/Hero";
-
-import { Marquee } from "./components/Marquee/Marquee";
+import "./App.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MoveUpRight } from "lucide-react";
 
-import "./App.css";
+import { Header } from "./components/Header/Header";
+import { Hero } from "./components/Hero/Hero";
+import { Marquee } from "./components/Marquee/Marquee";
 import { SectionContent } from "./components/SectionContent/SectionContent";
 import { CardTechnology } from "./components/CardTechnology/CardTechnology";
 import { projetos, tecnologias, usuario } from "./shared/data";
 import { LinhaFormacao } from "./components/LinhaFormacao/LinhaFormacao";
 import { CardCertificado } from "./components/CardCertificado/CardCertificado";
 import { Button } from "./components/Button/Button";
-import { MoveUpRight } from "lucide-react";
 
 function LandingPage() {
   return (
@@ -81,10 +80,12 @@ function LandingPage() {
           titleHeader="contato"
           title="Bora conversar?"
           titleColor="roxo"
-
           style="flex flex-col justify-center items-center text-center"
         >
-          <section id="containerContato" className="flex flex-col justify-center items-center gap-8 ">
+          <section
+            id="containerContato"
+            className="flex flex-col justify-center items-center gap-8 "
+          >
             <p>
               Aberto pra estágio, projetos e trocas sobre código. Só chamar.
             </p>
