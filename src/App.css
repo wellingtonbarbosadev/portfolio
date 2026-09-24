@@ -48,3 +48,9 @@ html {
 
   gap: 1rem;
 }
+
+.containerFormacao {
+  /* background-color: rgba(240, 248, 255, 0.165); */
+
+  height: 100%;
+}
