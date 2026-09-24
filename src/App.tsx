@@ -89,11 +89,11 @@ function LandingPage() {
               Aberto pra estágio, projetos e trocas sobre código. Só chamar.
             </p>
             <section className="buttonsContato flex gap-4">
-              <Button type="primario">
+              <Button link={usuario.linkedin} type="primario">
                 Linkedin
                 <MoveUpRight size={16} />
               </Button>
-              <Button type="secundario">
+              <Button link={usuario.github} type="secundario">
                 GitHub
                 <MoveUpRight size={16} />
               </Button>

@@ -21,7 +21,7 @@ export function Button({
   return (
     <a
       href={link}
-      target={link === usuario.github ? "_blank" : "_self"}
+      target={!link?.includes("#") ? "_blank" : "_self"}
       className={`${styles.button} ${tipoBotao}`}
       {...rest}
     >
