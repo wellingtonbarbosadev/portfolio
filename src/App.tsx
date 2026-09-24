@@ -10,6 +10,7 @@ import { SectionContent } from "./components/SectionContent/SectionContent";
 import { CardTechnology } from "./components/CardTechnology/CardTechnology";
 import { projetos, tecnologias, usuario } from "./shared/data";
 import { LinhaFormacao } from "./components/LinhaFormacao/LinhaFormacao";
+import { CardCertificado } from "./components/CardCertificado/CardCertificado";
 
 function LandingPage() {
   return (
@@ -27,7 +28,7 @@ function LandingPage() {
           title="Projetos que construí"
           titleColor="roxo"
         >
-          <section className="containerProjetos">
+          <section id="containerProjetos">
             {projetos.map((projeto) => (
               <CardTechnology
                 title={projeto.title}
@@ -43,12 +44,30 @@ function LandingPage() {
           title="De onde eu venho"
           titleColor="laranja"
         >
-          <section className="containerFormacao">
+          <section id="containerFormacao">
             {usuario.formacao.map((formacao) => {
               return (
                 <LinhaFormacao
                   periodo={formacao.periodo}
                   instituicao={formacao.instituicao}
+                />
+              );
+            })}
+          </section>
+        </SectionContent>
+
+        <SectionContent
+          titleHeader="certificados"
+          title="Estudo contínuo"
+          titleColor="verde"
+        >
+          <section id="containerCertificados">
+            {usuario.certificados.map((certificado) => {
+              return (
+                <CardCertificado
+                  imagem={certificado.imagem}
+                  nome={certificado.nome}
+                  detalhes={certificado.detalhes}
                 />
               );
             })}
