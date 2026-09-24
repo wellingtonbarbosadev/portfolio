@@ -1,4 +1,3 @@
-import { usuario } from "../../shared/data";
 import styles from "./Button.module.css";
 
 type ButtonProps = React.HTMLAttributes<HTMLAnchorElement> & {
