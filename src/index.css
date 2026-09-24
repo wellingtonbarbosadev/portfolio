@@ -68,7 +68,7 @@
   --orange: oklch(0.72 0.15 40);
   --green: oklch(0.72 0.15 140);
 
-  --gray: 
+  --gray: rgb(199, 199, 199);
   font-optical-sizing: auto;
 }
 

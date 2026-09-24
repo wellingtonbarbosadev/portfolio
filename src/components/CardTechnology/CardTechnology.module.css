@@ -22,6 +22,11 @@
     font-weight: bold;
   }
 
+  p {
+    color: var(--gray);
+    font-size: 14px;
+  }
+
   &:hover {
     border: 1px solid var(--purple);
 
