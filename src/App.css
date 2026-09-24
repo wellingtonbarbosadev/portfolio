@@ -56,6 +56,15 @@ html {
   height: 100%;
 }
 
+#containerContato {
+  p {
+    color: var(--gray);
+    opacity: .7;
+  }
+
+  margin-bottom: 6rem;
+}
+
 .card {
   display: flex;
   flex-direction: column;

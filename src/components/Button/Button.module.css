@@ -11,7 +11,20 @@
   height: 100%;
   font-weight: bold;
   border-radius: 0.7rem;
+
+  align-items: center;
+  gap: 1rem;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+    transform: scale(0.96);
+  }
+
+  
 }
+
 
 .primario {
   background-color: var(--purple);

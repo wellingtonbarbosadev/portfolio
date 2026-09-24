@@ -5,6 +5,7 @@ type SectionContentProps = React.HTMLAttributes<HTMLElement> & {
   title: string;
   titleHeader: string;
   titleColor: "roxo" | "laranja" | "verde";
+  style?: string
 };
 
 export function SectionContent({
@@ -12,6 +13,7 @@ export function SectionContent({
   titleHeader,
   titleColor,
   children,
+  style = "",
   ...rest
 }: SectionContentProps) {
   return (
@@ -26,9 +28,9 @@ export function SectionContent({
       scale={1}
       threshold={0.1}
       delay={0}
-      className="sectionContent"
+      className={`sectionContent`}
     >
-      <section {...rest}>
+      <section className={style} {...rest}>
         <header className={`${styles.sectionHeader}`}>
           <span
             className={`${styles.sectionTitleHeader} ${styles[titleColor]}`}

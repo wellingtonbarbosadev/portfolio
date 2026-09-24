@@ -11,6 +11,8 @@ import { CardTechnology } from "./components/CardTechnology/CardTechnology";
 import { projetos, tecnologias, usuario } from "./shared/data";
 import { LinhaFormacao } from "./components/LinhaFormacao/LinhaFormacao";
 import { CardCertificado } from "./components/CardCertificado/CardCertificado";
+import { Button } from "./components/Button/Button";
+import { MoveUpRight } from "lucide-react";
 
 function LandingPage() {
   return (
@@ -72,6 +74,30 @@ function LandingPage() {
                 />
               );
             })}
+          </section>
+        </SectionContent>
+
+        <SectionContent
+          titleHeader="contato"
+          title="Bora conversar?"
+          titleColor="roxo"
+
+          style="flex flex-col justify-center items-center text-center"
+        >
+          <section id="containerContato" className="flex flex-col justify-center items-center gap-8 ">
+            <p>
+              Aberto pra estágio, projetos e trocas sobre código. Só chamar.
+            </p>
+            <section className="buttonsContato flex gap-4">
+              <Button type="primario">
+                Linkedin
+                <MoveUpRight size={16} />
+              </Button>
+              <Button type="secundario">
+                GitHub
+                <MoveUpRight size={16} />
+              </Button>
+            </section>
           </section>
         </SectionContent>
       </main>
