@@ -11,7 +11,7 @@ type FormacaoType = {
 
 export function LinhaFormacao(formacao: FormacaoType) {
   return (
-    <section className="flex w-full h-full border-t border-t-gray-800 py-4">
+    <section className={`${styles.linha} flex w-full h-full border-t border-t-gray-800 py-4`}>
       <span className="flex-1">{formacao.periodo}</span>
 
       <section className="flex-3">

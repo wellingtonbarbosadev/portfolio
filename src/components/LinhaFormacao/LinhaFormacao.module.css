@@ -1,0 +1,7 @@
+.linha {
+  padding-block: 1rem;
+
+  display: flex;
+
+  align-items: center;
+}
