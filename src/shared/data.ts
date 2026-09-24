@@ -1,3 +1,5 @@
+import type { FormacaoType } from "../components/LinhaFormacao/LinhaFormacao";
+
 export type Projeto = {
   titulo: string;
   descricao: string;
@@ -13,6 +15,8 @@ export type Usuario = {
   local: string;
   status: string;
   linkedin: string;
+
+  formacao: FormacaoType[];
 };
 
 export type Linha = { chave: string; valor: string };
@@ -41,6 +45,15 @@ export const usuario: Usuario = {
   bio: "Busco estágio em desenvolvimento front-end, back-end ou full-stack.",
   local: "Rio de Janeiro, RJ",
   status: "open_to_work",
+  formacao: [
+    {
+      periodo: "2025 - 2029",
+      instituicao: {
+        nome: "Universidade Veiga de Almeida (UVA) - Rio de Janeiro.",
+        detalhes: "Engenharia de Software",
+      },
+    },
+  ],
   github: "https://github.com/wellingtonbarbosadev",
   linkedin: "https://linkedin.com/in/wellingtoncbarbosa",
 };
