@@ -1,20 +1,7 @@
 .tecnologiasCard {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  background-color: var(--background-devcard);
-  padding: 2rem;
-  border-radius: 1rem;
-
-  border: 1px solid oklch(0.28 0.02 260);
-
-  font-family: "JetBrains Mono", monospace;
-
-  gap: 0.5rem;
-  transition: all .3s ease;
+  border-style: solid;
 
 
   h3 {
@@ -27,7 +14,7 @@
     font-size: 14px;
   }
 
-  &:hover {
+  /* &:hover {
     border: 1px solid var(--purple);
 
     transform: translateY(-10px) scale(1.01);
@@ -37,7 +24,7 @@
     cursor: pointer;
 
     z-index: 99;
-  }
+  } */
 
   .tecnologias {
     display: flex;

@@ -13,10 +13,10 @@ export function Header() {
           </h2>
 
           <nav className="lowercase flex gap-4">
-            <a href="#projetos">Projetos</a>
-            <a href="#formacao">Formação</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#contato">Contato</a>
+            <a href="#containerProjetos">Projetos</a>
+            <a href="#containerFormacao">Formação</a>
+            <a href="#containerCertificados">Certificados</a>
+            <a href="#containerContato">Contato</a>
           </nav>
           
         </GlassSurface>

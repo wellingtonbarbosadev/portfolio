@@ -14,7 +14,7 @@ export function CardTechnology({
   tecnologias,
 }: CardTechnologyProps) {
   return (
-    <section className={styles.tecnologiasCard}>
+    <section className={`${styles.tecnologiasCard} card`}>
       <MoveUpRight size={16}/>
       <h3>{title}</h3>
       <p>{descricao}</p>
