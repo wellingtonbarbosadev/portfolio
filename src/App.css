@@ -40,7 +40,7 @@ html {
 #containerProjetos,
 #containerCertificados {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   align-items: stretch;
 
   height: 100%;
@@ -78,6 +78,11 @@ html {
     border: 1px solid var(--purple);
 
     transform: translateY(-10px) scale(1.01);
+
+    @media (max-width: 800px) {
+      transform: translateY(0px) scale(1.01);
+      
+    }
 
     box-shadow: 0px 0px 50px color-mix(in srgb, var(--purple) 20%, transparent);
 
