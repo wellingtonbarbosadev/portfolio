@@ -5,7 +5,16 @@
 
   align-items: center;
 
+  span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    opacity: .5;
+  }
+
   p {
     color: var(--gray);
+
+    font-size: 14px;
+    opacity: .7;
   }
 }
