@@ -9,7 +9,9 @@ export function CardCertificado({
 }: CertificadoType) {
   return (
     <a href={link} target="_blank" className={`${styles.cardCertificado} card`}>
-      <img src={imagem} alt="" />
+      <div className={styles.imageWrapper}>
+        <img src={imagem} alt="" />
+      </div>
 
       <section>
         <h4>{nome}</h4>
