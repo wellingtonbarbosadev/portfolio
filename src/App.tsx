@@ -67,6 +67,7 @@ function LandingPage() {
                 <CardCertificado
                   imagem={certificado.imagem}
                   nome={certificado.nome}
+                  link={certificado.link}
                   detalhes={certificado.detalhes}
                 />
               );
