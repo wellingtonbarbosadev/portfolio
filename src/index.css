@@ -132,3 +132,11 @@ a,
 button {
   cursor: pointer;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 200px;
+}
