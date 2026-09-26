@@ -22,11 +22,9 @@ header.headerContainer {
     }
 
     background: rgba(255, 255, 255, 0.028);
-
   }
   .header {
     .glass-surface__content {
-      
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -53,21 +51,24 @@ header.headerContainer {
   }
 
   nav {
-    &:has(a:hover) a:not(:hover) {
-      opacity: 0.5;
+    &:has(a:hover, a.active) {
+      a:not(:hover):not(.active) {
+        opacity: 0.5;
+      }
     }
   }
 
   a {
     transition: all 0.2s ease;
 
-    &:hover {
+    &:hover,
+    &.active {
       transform: scale(1.2);
       opacity: 1;
       padding-inline: 0.5rem;
     }
 
-    &:focus {
+    &:focus:not(.active) {
       padding: unset;
       transform: unset;
     }
@@ -86,7 +87,8 @@ header.headerContainer {
         opacity: 0.7;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
           opacity: 1;
         }
       }

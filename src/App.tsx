@@ -14,11 +14,8 @@ import { CardCertificado } from "./components/CardCertificado/CardCertificado";
 import { Button } from "./components/Button/Button";
 
 function LandingPage() {
-  
   function unhideCertificados() {
-    const showAllButton = document.querySelector(
-      "#showAll",
-    );
+    const showAllButton = document.querySelector("#showAll");
     const containerCertificados = document.getElementById(
       "containerCertificados",
     );
@@ -44,8 +41,9 @@ function LandingPage() {
           titleColor="roxo"
         >
           <section id="containerProjetos">
-            {projetos.map((projeto) => (
+            {projetos.map((projeto, index) => (
               <CardTechnology
+                key={index}
                 title={projeto.title}
                 descricao={projeto.descricao}
                 tecnologias={projeto.tecnologias}
@@ -63,6 +61,7 @@ function LandingPage() {
             {usuario.formacao.map((formacao) => {
               return (
                 <LinhaFormacao
+                  key={formacao.instituicao.nome}
                   periodo={formacao.periodo}
                   instituicao={formacao.instituicao}
                 />
@@ -81,6 +80,7 @@ function LandingPage() {
               {usuario.certificados.map((certificado) => {
                 return (
                   <CardCertificado
+                    key={certificado.link}
                     imagem={certificado.imagem}
                     nome={certificado.nome}
                     detalhes={certificado.detalhes}

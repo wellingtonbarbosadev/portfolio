@@ -1,6 +1,6 @@
 import styles from "./CardTechnology.module.css";
 
-import {MoveUpRight} from "lucide-react"
+import { MoveUpRight } from "lucide-react";
 
 type CardTechnologyProps = {
   title: string;
@@ -15,13 +15,13 @@ export function CardTechnology({
 }: CardTechnologyProps) {
   return (
     <section className={`${styles.tecnologiasCard} card`}>
-      <MoveUpRight size={16}/>
+      <MoveUpRight size={16} />
       <h3>{title}</h3>
       <p>{descricao}</p>
 
       <section className={styles.tecnologias}>
         {tecnologias.map((tecnologia) => (
-          <span>{tecnologia}</span>
+          <span key={tecnologia}>{tecnologia}</span>
         ))}
       </section>
     </section>
