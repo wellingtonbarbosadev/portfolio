@@ -6,6 +6,8 @@
 
   justify-content: start;
 
+  padding: 1rem;
+
   .imageWrapper {
     display: block;
     width: 100%;
@@ -30,7 +32,8 @@
       position: absolute;
       content: "";
       display: block;
-      z-index: 999;
+      pointer-events: none;
+      z-index: 2;
       bottom: 0;
       right: 0;
       border-radius: 0.6rem;
@@ -67,14 +70,5 @@
 
     text-align: justify;
   }
-
-  &:hover {
-    box-shadow: 0px 0px 50px color-mix(in srgb, var(--green) 20%, transparent);
-    border-color: var(--green);
-    border-style: dashed;
-
-    .imageWrapper::after {
-      opacity: 0;
-    }
-  }
 }
+

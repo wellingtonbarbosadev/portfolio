@@ -8,8 +8,8 @@ export function CardCertificado({
   link,
 }: CertificadoType) {
   return (
-    <a href={link} target="_blank" className={`${styles.cardCertificado} card`}>
-      <div className={styles.imageWrapper}>
+    <a href={link} target="_blank" className={`${styles.cardCertificado} cardCertificado  card`}>
+      <div className={`${styles.imageWrapper} imageWrapper`}>
         <img src={imagem} alt="" />
       </div>
 
