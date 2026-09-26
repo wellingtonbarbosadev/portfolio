@@ -14,17 +14,18 @@ import { CardCertificado } from "./components/CardCertificado/CardCertificado";
 import { Button } from "./components/Button/Button";
 
 function LandingPage() {
-  const showAllButton = document.querySelector(
-    "#containerCertificados.hide::after",
-  );
-  const showAll = document.addEventListener("click", () => showAllButton);
-
+  
   function unhideCertificados() {
+    const showAllButton = document.querySelector(
+      "#showAll",
+    );
     const containerCertificados = document.getElementById(
       "containerCertificados",
     );
 
     containerCertificados?.classList.toggle("hide");
+
+    showAllButton?.remove();
   }
 
   return (
@@ -89,7 +90,8 @@ function LandingPage() {
               })}
             </section>
 
-            <Button type="primario" id="showAll">
+            <Button type="primario" id="showAll" onClick={unhideCertificados}>
+              Mostrar tudo
               <ArrowDown size={16} />
             </Button>
           </section>
