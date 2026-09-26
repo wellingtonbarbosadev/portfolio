@@ -38,9 +38,9 @@ html {
 }
 
 #containerProjetos,
-#containerCertificados {
+#containerCertificados .certificados {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   align-items: stretch;
 
   height: 100%;
@@ -56,7 +56,69 @@ html {
   height: 100%;
 }
 
-#containerCertificados {
+#containerCertificados { 
+  &.hide {
+    cursor: not-allowed;
+  }
+  &.hide .cardCertificado {
+    pointer-events: none;
+  }
+  &.hide .cardCertificado:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: oklch(0.28 0.02 260);
+    border-style: dashed;
+  }
+  &:not(.hide) {
+    .cardCertificado {
+      &:hover {
+        box-shadow: 0px 0px 50px
+          color-mix(in srgb, var(--green) 20%, transparent);
+        border-color: var(--green);
+        border-style: dashed;
+
+        .imageWrapper::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+#containerCertificados.hide {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1px;
+
+  #showAll {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: 0.5rem;
+    bottom: 50px;
+    left: 50%;
+    z-index: 5;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    pointer-events: none;
+    cursor: not-allowed;
+
+    background: rgba(0, 0, 0, 0.782);
+  }
 }
 
 #containerContato {
@@ -103,6 +165,6 @@ html {
 
     cursor: pointer;
 
-    z-index: 99;
+    z-index: 3;
   }
 }

@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { MoveUpRight } from "lucide-react";
+import { ArrowDown, MoveUpRight } from "lucide-react";
 
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
@@ -14,6 +14,19 @@ import { CardCertificado } from "./components/CardCertificado/CardCertificado";
 import { Button } from "./components/Button/Button";
 
 function LandingPage() {
+  const showAllButton = document.querySelector(
+    "#containerCertificados.hide::after",
+  );
+  const showAll = document.addEventListener("click", () => showAllButton);
+
+  function unhideCertificados() {
+    const containerCertificados = document.getElementById(
+      "containerCertificados",
+    );
+
+    containerCertificados?.classList.toggle("hide");
+  }
+
   return (
     <>
       <Header />
@@ -62,17 +75,23 @@ function LandingPage() {
           title="Estudo contínuo"
           titleColor="verde"
         >
-          <section id="containerCertificados">
-            {usuario.certificados.map((certificado) => {
-              return (
-                <CardCertificado
-                  imagem={certificado.imagem}
-                  nome={certificado.nome}
-                  link={certificado.link}
-                  detalhes={certificado.detalhes}
-                />
-              );
-            })}
+          <section id="containerCertificados" className="hide">
+            <section className="certificados">
+              {usuario.certificados.map((certificado) => {
+                return (
+                  <CardCertificado
+                    imagem={certificado.imagem}
+                    nome={certificado.nome}
+                    detalhes={certificado.detalhes}
+                    link={certificado.link}
+                  />
+                );
+              })}
+            </section>
+
+            <Button type="primario" id="showAll">
+              <ArrowDown size={16} />
+            </Button>
           </section>
         </SectionContent>
 
