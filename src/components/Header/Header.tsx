@@ -22,7 +22,7 @@ export function Header() {
             ?.classList.add("active");
         });
       },
-      { threshold: 0.9, rootMargin: "-200px 0px 0px 0px" },
+      { threshold: 0.3, rootMargin: "-200px 0px 0px 0px" },
     );
     sections.forEach((section) => observer.observe(section));
     
