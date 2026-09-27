@@ -97,31 +97,33 @@ function LandingPage() {
           </section>
         </SectionContent>
 
-        <SectionContent
-          titleHeader="contato"
-          title="Bora conversar?"
-          titleColor="roxo"
-          style="flex flex-col justify-center items-center text-center"
-        >
-          <section
-            id="containerContato"
-            className="flex flex-col justify-center items-center gap-8 "
+        <footer>
+          <SectionContent
+            titleHeader="contato"
+            title="Bora conversar?"
+            titleColor="roxo"
+            style="flex flex-col justify-center items-center text-center"
           >
-            <p>
-              Aberto pra estágio, projetos e trocas sobre código. Só chamar.
-            </p>
-            <section className="buttonsContato flex gap-4">
-              <Button link={usuario.linkedin} type="primario">
-                Linkedin
-                <MoveUpRight size={16} />
-              </Button>
-              <Button link={usuario.github} type="secundario">
-                GitHub
-                <MoveUpRight size={16} />
-              </Button>
+            <section
+              id="containerContato"
+              className="flex flex-col justify-center items-center gap-8 "
+            >
+              <p>
+                Aberto pra estágio, projetos e trocas sobre código. Só chamar.
+              </p>
+              <section className="buttonsContato flex gap-4">
+                <Button link={usuario.linkedin} type="primario">
+                  Linkedin
+                  <MoveUpRight size={16} />
+                </Button>
+                <Button link={usuario.github} type="secundario">
+                  GitHub
+                  <MoveUpRight size={16} />
+                </Button>
+              </section>
             </section>
-          </section>
-        </SectionContent>
+          </SectionContent>
+        </footer>
       </main>
     </>
   );
