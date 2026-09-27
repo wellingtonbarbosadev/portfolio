@@ -52,6 +52,12 @@ export const tecnologias = [
   "Angular",
   "Node.js",
   "TypeScript",
+  "PrismaORM",
+  "Express",
+  "TailwindCSS",
+  "HTML",
+  "CSS",
+  "JavaScript",
   "Java",
   "Spring Boot",
   "Python",
@@ -61,17 +67,6 @@ export const tecnologias = [
 ];
 
 export const usuario: Usuario = {
-  //   const wellington = {
-  //     nome: "Wellington Barbosa",
-  //     idade: 20,
-  //     localização: "Rio de Janeiro, Brasil",
-  //     formação: "Engenharia de Software - Universidade Veiga de Almeida (UVA)",
-  //     cargo: "Desenvolvedor FullStack",
-  //     código: ["Java", "JavaScript", "Python", "C", "HTML", "CSS"],
-  //     frameworks: ["Spring Boot", "Express.js", "React.js"],
-  //     desafioAtual: "Criar soluções inovadoras e eficientes",
-  //     hobbies: ["Programação", "Aprender novas tecnologias", "Resolver problemas"]
-  // };
   nome: "Wellington Barbosa",
   idade:
     new Date().getFullYear() -
