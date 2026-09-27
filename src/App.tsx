@@ -16,11 +16,9 @@ import { Button } from "./components/Button/Button";
 function LandingPage() {
   function unhideCertificados() {
     const showAllButton = document.querySelector("#showAll");
-    const containerCertificados = document.getElementById(
-      "containerCertificados",
-    );
+    const certificados = document.getElementById("certificados");
 
-    containerCertificados?.classList.toggle("hide");
+    certificados?.classList.toggle("hide");
 
     showAllButton?.remove();
   }
@@ -40,7 +38,7 @@ function LandingPage() {
           title="Projetos que construí"
           titleColor="roxo"
         >
-          <section id="containerProjetos">
+          <section id="projetos">
             {projetos.map((projeto, index) => (
               <CardTechnology
                 key={index}
@@ -57,7 +55,7 @@ function LandingPage() {
           title="De onde eu venho"
           titleColor="laranja"
         >
-          <section id="containerFormacao">
+          <section id="formacao">
             {usuario.formacao.map((formacao) => {
               return (
                 <LinhaFormacao
@@ -75,7 +73,7 @@ function LandingPage() {
           title="Estudo contínuo"
           titleColor="verde"
         >
-          <section id="containerCertificados" className="hide">
+          <section id="certificados" className="hide">
             <section className="certificados">
               {usuario.certificados.map((certificado) => {
                 return (
@@ -105,7 +103,7 @@ function LandingPage() {
             style="flex flex-col justify-center items-center text-center"
           >
             <section
-              id="containerContato"
+              id="contato"
               className="flex flex-col justify-center items-center gap-8 "
             >
               <p>

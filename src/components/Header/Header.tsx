@@ -8,7 +8,7 @@ export function Header() {
     const navItens = document.querySelectorAll(".headerContainer nav a");
 
     const sections = document.querySelectorAll(
-      "#containerProjetos, #containerFormacao, #containerCertificados, #containerContato",
+      "#projetos, #formacao, #certificados, #contato",
     );
     const observer = new IntersectionObserver(
       (entries) => {
@@ -25,7 +25,6 @@ export function Header() {
       { threshold: 0.3, rootMargin: "-200px 0px 0px 0px" },
     );
     sections.forEach((section) => observer.observe(section));
-    
   }, []);
 
   return (
@@ -37,10 +36,10 @@ export function Header() {
           </h2>
 
           <nav className="lowercase flex gap-4">
-            <a href="#containerProjetos">Projetos</a>
-            <a href="#containerFormacao">Formação</a>
-            <a href="#containerCertificados">Certificados</a>
-            <a href="#containerContato">Contato</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#formacao">Formação</a>
+            <a href="#certificados">Certificados</a>
+            <a href="#contato">Contato</a>
           </nav>
         </GlassSurface>
       </header>
