@@ -19,6 +19,8 @@ export type Projeto = {
 
 export type Usuario = {
   nome: string;
+  idade: number;
+  desafioAtual: string;
   cargo: string;
   bio: string;
   github: string;
@@ -30,7 +32,7 @@ export type Usuario = {
   certificados: CertificadoType[];
 };
 
-export type Linha = { chave: string; valor: string };
+export type Linha = { chave: string; valor: string | number | string[] };
 
 export type ProjetoType = {
   title: string;
@@ -41,27 +43,48 @@ export type ProjetoType = {
 export type CertificadoType = {
   imagem: string;
   nome: string;
-  link: string
+  link: string;
   detalhes: string;
 };
 
 export const tecnologias = [
-  "Java",
-  "Spring Boot",
+  "React",
+  "Angular",
   "Node.js",
   "TypeScript",
+  "Java",
+  "Spring Boot",
   "Python",
   "Flask",
-  "React",
   "PostgreSQL",
   "SQLite",
 ];
 
 export const usuario: Usuario = {
+  //   const wellington = {
+  //     nome: "Wellington Barbosa",
+  //     idade: 20,
+  //     localização: "Rio de Janeiro, Brasil",
+  //     formação: "Engenharia de Software - Universidade Veiga de Almeida (UVA)",
+  //     cargo: "Desenvolvedor FullStack",
+  //     código: ["Java", "JavaScript", "Python", "C", "HTML", "CSS"],
+  //     frameworks: ["Spring Boot", "Express.js", "React.js"],
+  //     desafioAtual: "Criar soluções inovadoras e eficientes",
+  //     hobbies: ["Programação", "Aprender novas tecnologias", "Resolver problemas"]
+  // };
   nome: "Wellington Barbosa",
-  cargo: "Estudante de Engenharia de Software",
+  idade:
+    new Date().getFullYear() -
+    new Date("2005-11-29").getFullYear() -
+    (new Date().getMonth() < new Date("2005-11-29").getMonth() ||
+    (new Date().getMonth() === new Date("2005-11-29").getMonth() &&
+      new Date().getDate() < new Date("2005-11-29").getDate())
+      ? 1
+      : 0),
+  cargo: "Desenvolvedor Full-Stack",
   bio: "Busco estágio em desenvolvimento front-end, back-end ou full-stack.",
-  local: "Rio de Janeiro, RJ",
+  local: "Rio de Janeiro, Brasil",
+  desafioAtual: "Criar soluções inovadoras e eficientes",
   status: "open_to_work",
   formacao: [
     {
@@ -91,55 +114,64 @@ export const usuario: Usuario = {
       imagem: formacaoFullStackImg,
       nome: "Formação Full-Stack",
       link: "https://app.rocketseat.com.br/certificates/68e7b178-30ce-4077-9572-e0d07d7886f0",
-      detalhes: "Fundamentos da programação Web, Configuração de ambiente de desenvolvimento, Git e Github, Fundamentos e conceitos avançados de HTML, CSS e JavaScript, Fundamentos do TypeScript, Desenvolvimento de aplicações back-end com Node.js, Desenvolvimento de aplicações front-end com React, Banco de dados, Docker, Testes automatizados, Tailwind CSS, Requisições HTTP e APIs, Deploy de aplicações front-end e back-end.",
+      detalhes:
+        "Fundamentos da programação Web, Configuração de ambiente de desenvolvimento, Git e Github, Fundamentos e conceitos avançados de HTML, CSS e JavaScript, Fundamentos do TypeScript, Desenvolvimento de aplicações back-end com Node.js, Desenvolvimento de aplicações front-end com React, Banco de dados, Docker, Testes automatizados, Tailwind CSS, Requisições HTTP e APIs, Deploy de aplicações front-end e back-end.",
     },
     {
       imagem: introducaoReactImg,
       nome: "Introdução ao React",
       link: "https://app.rocketseat.com.br/certificates/da46947a-238b-47bd-b243-5f4762b00007",
-      detalhes: "Fundamentos do React, componentes, estados, propriedades, TypeScript, navegação com React Router, hooks, React Hook Form, Tailwind CSS, requisições HTTP e consumo de API, paginação, deploy de aplicações front-end.",
+      detalhes:
+        "Fundamentos do React, componentes, estados, propriedades, TypeScript, navegação com React Router, hooks, React Hook Form, Tailwind CSS, requisições HTTP e consumo de API, paginação, deploy de aplicações front-end.",
     },
     {
       imagem: nodejsImg,
       nome: "Introdução ao Node.js",
       link: "https://app.rocketseat.com.br/certificates/52150a48-932f-4d78-b679-ee341030cf83",
-      detalhes: "Fundamentos do Node.js, desenvolvimento de APIs REST com Express, TypeScript, gerenciamento de bancos de dados com PostgreSQL e Prisma, autenticação e autorização, testes automatizados, uso de containers com Docker e deploy de aplicações Node.js.",
+      detalhes:
+        "Fundamentos do Node.js, desenvolvimento de APIs REST com Express, TypeScript, gerenciamento de bancos de dados com PostgreSQL e Prisma, autenticação e autorização, testes automatizados, uso de containers com Docker e deploy de aplicações Node.js.",
     },
     {
       imagem: javascriptImg,
       nome: "JavaScript",
       link: "https://app.rocketseat.com.br/certificates/97dc97be-122c-4208-a959-2f3826df0ab3",
-      detalhes: "Sintaxe básica, tipos de dados, operadores, variáveis, controle de fluxo (if, else, switch), laços (for, while, do...while), funções, arrays, objetos, manipulação do DOM, eventos, callbacks, promessas, async/await, escopo, hoisting, classes e herança, módulos, funções assíncronas, pacotes, APIs, JSON, compiladores, bundlers, JavaScript antes do framework.",
+      detalhes:
+        "Sintaxe básica, tipos de dados, operadores, variáveis, controle de fluxo (if, else, switch), laços (for, while, do...while), funções, arrays, objetos, manipulação do DOM, eventos, callbacks, promessas, async/await, escopo, hoisting, classes e herança, módulos, funções assíncronas, pacotes, APIs, JSON, compiladores, bundlers, JavaScript antes do framework.",
     },
     {
       imagem: springBootImg,
       nome: "Fundamentos do Spring Boot",
       link: "https://app.rocketseat.com.br/certificates/8f28eccc-ce82-4d6f-9808-ac4df4b74a45",
-      detalhes: "Spring Boot, annotations, controller, component scan, API REST, path, body e header params, ResponseEntity, IoC e DI.",
+      detalhes:
+        "Spring Boot, annotations, controller, component scan, API REST, path, body e header params, ResponseEntity, IoC e DI.",
     },
     {
       imagem: javaImg,
       nome: "Fundamentos de Java",
       link: "https://app.rocketseat.com.br/certificates/b70b74e5-b05e-4101-9c27-734fce9984c6",
-      detalhes: "Java, JDK, JRE, JVM, tipos de dados, controles de fluxo, estruturas de repetição, POO, operadores, Java Time, Java NIO, exceções, expressões.",
+      detalhes:
+        "Java, JDK, JRE, JVM, tipos de dados, controles de fluxo, estruturas de repetição, POO, operadores, Java Time, Java NIO, exceções, expressões.",
     },
     {
       imagem: htmlCssImg,
       nome: "Fundamentos de HTML e CSS",
       link: "https://app.rocketseat.com.br/certificates/9d77243c-a3a2-4286-bed6-88dc5fa45490",
-      detalhes: "Estrutura do HTML, tags HTML, semântica, acessibilidade, conceitos de CSS, seletores CSS, animações em CSS, grid e flexbox, formulários, inputs, variáveis em CSS, responsividade.",
+      detalhes:
+        "Estrutura do HTML, tags HTML, semântica, acessibilidade, conceitos de CSS, seletores CSS, animações em CSS, grid e flexbox, formulários, inputs, variáveis em CSS, responsividade.",
     },
     {
       imagem: gitGithubImg,
       nome: "O básico de Git e GitHub",
       link: "https://app.rocketseat.com.br/certificates/52022b04-de4e-474e-a2b1-4300ab811262",
-      detalhes: "Git, comandos básicos, repositórios, comandos para trabalhar local e com repositórios remotos, criação de commits, GitHub, controle de versão com o GitHub.",
+      detalhes:
+        "Git, comandos básicos, repositórios, comandos para trabalhar local e com repositórios remotos, criação de commits, GitHub, controle de versão com o GitHub.",
     },
     {
       imagem: htmlCssB7webImg,
       nome: "Fundamentos em HTML/CSS",
       link: "https://app.b7web.com.br/certificates/f9b5be7d-3b88-49e1-8195-bd3205082487",
-      detalhes: "Curso de Fundamentos em HTML/CSS da B7Web, com carga horária de 12 horas, concluído em 29/05/2025.",
+      detalhes:
+        "Curso de Fundamentos em HTML/CSS da B7Web, com carga horária de 12 horas, concluído em 29/05/2025.",
     },
   ],
   github: "https://github.com/wellingtonbarbosadev",
@@ -153,7 +185,15 @@ export const LINHAS: Linha[] = [
   },
   {
     chave: "cargo",
-    valor: "Desenvolvedor FullStack",
+    valor: usuario.cargo,
+  },
+  {
+    chave: "idade",
+    valor: usuario.idade,
+  },
+  {
+    chave: "desafioAtual",
+    valor: usuario.desafioAtual,
   },
   {
     chave: "local",
