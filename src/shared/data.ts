@@ -10,12 +10,14 @@ import springBootImg from "../assets/certificados/spring-boot.png";
 import gitGithubImg from "../assets/certificados/git-github.png";
 import htmlCssB7webImg from "../assets/certificados/html-css-b7web.png";
 
-export type Projeto = {
-  titulo: string;
-  descricao: string;
-  tecnologias: string[];
-  link: string;
-};
+// export type Projeto = {
+//   titulo: string;
+//   descricao: string;
+//   tecnologias: string[];
+//   imagens: string[];
+//   linkDemo: string;
+//   linkRepositorio: string;
+// };
 
 export type Usuario = {
   nome: string;
@@ -38,6 +40,9 @@ export type ProjetoType = {
   title: string;
   descricao: string;
   tecnologias: string[];
+  imagens: string[];
+  linkDemo: string;
+  linkRepositorio: string;
 };
 
 export type CertificadoType = {
@@ -206,17 +211,26 @@ export const projetos: ProjetoType[] = [
     descricao:
       "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
     tecnologias: ["TypeScript", "Node.js"],
+    imagens: [],
+    linkDemo: "",
+    linkRepositorio: "",
   },
   {
     title: "refund-v2",
     descricao:
       "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação.",
     tecnologias: ["TypeScript"],
+    imagens: [],
+    linkDemo: "",
+    linkRepositorio: "",
   },
   {
     title: "helpdesk",
     descricao:
       "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
     tecnologias: ["TypeScript", "Node.js"],
+    imagens: [],
+    linkDemo: "",
+    linkRepositorio: "",
   },
 ];
