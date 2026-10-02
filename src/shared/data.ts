@@ -38,6 +38,7 @@ export type Linha = { chave: string; valor: string | number | string[] };
 
 export type ProjetoType = {
   title: string;
+  descricaoCurta?: string;
   descricao: string;
   tecnologias: string[];
   imagens: string[];
@@ -208,8 +209,10 @@ export const LINHAS: Linha[] = [
 export const projetos: ProjetoType[] = [
   {
     title: "helpdesk",
-    descricao:
+    descricaoCurta:
       "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
+    descricao:
+      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim. Permite que os usuários registrem problemas, acompanhem o status dos tickets e recebam atualizações em tempo real. O sistema também oferece recursos de gerenciamento para a equipe de suporte, incluindo atribuição de tickets, categorização e priorização.",
     tecnologias: ["TypeScript", "Node.js"],
     imagens: [],
     linkDemo: "",
@@ -217,8 +220,10 @@ export const projetos: ProjetoType[] = [
   },
   {
     title: "refund-v2",
-    descricao:
+    descricaoCurta:
       "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação.",
+    descricao:
+      "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação. Permite que os usuários enviem solicitações de reembolso, anexem comprovantes e acompanhem o status do processo. A equipe responsável pode revisar as solicitações, aprovar ou rejeitar os pedidos e fornecer feedback aos solicitantes.",
     tecnologias: ["TypeScript"],
     imagens: [],
     linkDemo: "",
@@ -226,8 +231,10 @@ export const projetos: ProjetoType[] = [
   },
   {
     title: "helpdesk",
-    descricao:
+    descricaoCurta:
       "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
+    descricao:
+      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim. Permite que os usuários registrem problemas, acompanhem o status dos tickets e recebam atualizações em tempo real. O sistema também oferece recursos de gerenciamento para a equipe de suporte, incluindo atribuição de tickets, categorização e priorização.",
     tecnologias: ["TypeScript", "Node.js"],
     imagens: [],
     linkDemo: "",

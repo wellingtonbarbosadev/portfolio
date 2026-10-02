@@ -43,6 +43,7 @@ function LandingPage() {
               <CardTechnology
                 key={index}
                 title={projeto.title}
+                descricaoCurta={projeto.descricaoCurta}
                 descricao={projeto.descricao}
                 tecnologias={projeto.tecnologias}
                 imagens={projeto.imagens}

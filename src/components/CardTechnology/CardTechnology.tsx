@@ -6,6 +6,7 @@ import { MoveUpRight } from "lucide-react";
 
 type CardTechnologyProps = {
   title: string;
+  descricaoCurta?: string;
   descricao: string;
   tecnologias: string[];
   imagens?: string[];
@@ -15,6 +16,7 @@ type CardTechnologyProps = {
 
 export function CardTechnology({
   title,
+  descricaoCurta,
   descricao,
   tecnologias,
   imagens,
@@ -31,7 +33,7 @@ export function CardTechnology({
       >
         <MoveUpRight size={16} />
         <h3>{title}</h3>
-        <p>{descricao}</p>
+        <p>{descricaoCurta || descricao}</p>
 
         <section className={styles.tecnologias}>
           {tecnologias.map((tecnologia) => (
