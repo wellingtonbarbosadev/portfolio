@@ -40,7 +40,7 @@ export function Modal({
   return createPortal(
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
-        <header className="flex justify-between">
+        <header>
           <h2>{title}</h2>
 
           <button onClick={close}>

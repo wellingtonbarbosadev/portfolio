@@ -19,4 +19,15 @@
 
   background: #18181b;
   border-radius: 12px;
+
+  header {
+    display: flex;
+    align-items: center;
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      width: 100%;
+    }
+
+  }
 }
