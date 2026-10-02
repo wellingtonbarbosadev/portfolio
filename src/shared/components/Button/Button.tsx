@@ -15,20 +15,34 @@ export function Button({
   href,
   ...rest
 }: ButtonProps) {
-  const tipoBotao = type === "primario" ? styles.primario : styles.secundario;
-  
-  function isInternalLink(link: string) {
-    const url = new URL(link, window.location.origin);
+  const tipoBotao =
+    type === "primario"
+      ? styles.primario
+      : styles.secundario;
 
-    return url.origin === window.location.origin;
+  const url = link || href || "/";
+
+  function isInternalLink(link: string) {
+    // Links relativos são internos
+    if (link.startsWith("/") || link.startsWith("#")) {
+      return true;
+    }
+
+    try {
+      const url = new URL(link);
+
+      return url.origin === window.location.origin;
+    } catch {
+      return false;
+    }
   }
 
-  const internal = isInternalLink(link ?? window.location.origin);
+  const internal = isInternalLink(url);
 
   return (
     <a
-      href={link}
-      target={internal ? "_blank" : "_self"}
+      href={url}
+      target={internal ? "_self" : "_blank"}
       className={`${styles.button} ${tipoBotao}`}
       rel={internal ? undefined : "noopener noreferrer"}
       {...rest}
