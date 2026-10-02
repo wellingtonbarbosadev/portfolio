@@ -45,6 +45,9 @@ function LandingPage() {
                 title={projeto.title}
                 descricao={projeto.descricao}
                 tecnologias={projeto.tecnologias}
+                imagens={projeto.imagens}
+                linkDemo={projeto.linkDemo}
+                linkRepositorio={projeto.linkRepositorio}
               />
             ))}
           </section>

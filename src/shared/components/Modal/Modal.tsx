@@ -5,19 +5,23 @@ import styles from "./Modal.module.css";
 
 import { Button } from "../Button/Button";
 import { XIcon } from "lucide-react";
+import type { ProjetoType } from "../../data";
 
-type ModalProps = {
+type ModalProps = ProjetoType & {
   title: string;
   open: boolean;
   close: () => void;
-  children: ReactNode;
 };
 
 export function Modal({
   title,
   open,
   close,
-  children,
+  descricao,
+  tecnologias,
+  imagens,
+  linkDemo,
+  linkRepositorio
 }: ModalProps) {
   // useEffect(() => {
   //   if (!open) return;
@@ -48,7 +52,9 @@ export function Modal({
           </button>
         </header>
 
-        {children}
+        <div>
+          <p>{descricao}</p>
+        </div>
       </div>
     </div>,
     document.body

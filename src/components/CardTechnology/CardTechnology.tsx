@@ -8,12 +8,18 @@ type CardTechnologyProps = {
   title: string;
   descricao: string;
   tecnologias: string[];
+  imagens?: string[];
+  linkDemo?: string;
+  linkRepositorio: string;
 };
 
 export function CardTechnology({
   title,
   descricao,
   tecnologias,
+  imagens,
+  linkDemo,
+  linkRepositorio,
 }: CardTechnologyProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,10 +41,16 @@ export function CardTechnology({
       </section>
 
       {isOpen && (
-        <Modal title={title} open={isOpen} close={() => setIsOpen(false)}>
-          {" "}
-          teste{" "}
-        </Modal>
+        <Modal
+          title={title}
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          descricao={descricao}
+          tecnologias={tecnologias}
+          imagens={imagens ?? []}
+          linkDemo={linkDemo ?? ""}
+          linkRepositorio={linkRepositorio}
+        />
       )}
     </>
   );
