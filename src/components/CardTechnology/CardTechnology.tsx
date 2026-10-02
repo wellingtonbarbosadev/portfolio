@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Modal } from "../../shared/components/Modal/Modal";
 import styles from "./CardTechnology.module.css";
 
 import { MoveUpRight } from "lucide-react";
@@ -13,17 +15,31 @@ export function CardTechnology({
   descricao,
   tecnologias,
 }: CardTechnologyProps) {
-  return (
-    <section className={`${styles.tecnologiasCard} card`}>
-      <MoveUpRight size={16} />
-      <h3>{title}</h3>
-      <p>{descricao}</p>
+  const [isOpen, setIsOpen] = useState(false);
 
-      <section className={styles.tecnologias}>
-        {tecnologias.map((tecnologia) => (
-          <span key={tecnologia}>{tecnologia}</span>
-        ))}
+  return (
+    <>
+      <section
+        onClick={() => setIsOpen(true)}
+        className={`${styles.tecnologiasCard} card`}
+      >
+        <MoveUpRight size={16} />
+        <h3>{title}</h3>
+        <p>{descricao}</p>
+
+        <section className={styles.tecnologias}>
+          {tecnologias.map((tecnologia) => (
+            <span key={tecnologia}>{tecnologia}</span>
+          ))}
+        </section>
       </section>
-    </section>
+
+      {isOpen && (
+        <Modal title={title} open={isOpen} close={() => setIsOpen(false)}>
+          {" "}
+          teste{" "}
+        </Modal>
+      )}
+    </>
   );
 }

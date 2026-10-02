@@ -11,7 +11,7 @@ import { CardTechnology } from "./components/CardTechnology/CardTechnology";
 import { projetos, tecnologias, usuario } from "./shared/data";
 import { LinhaFormacao } from "./components/LinhaFormacao/LinhaFormacao";
 import { CardCertificado } from "./components/CardCertificado/CardCertificado";
-import { Button } from "./components/Button/Button";
+import { Button } from "./shared/components/Button/Button";
 
 function LandingPage() {
   function unhideCertificados() {

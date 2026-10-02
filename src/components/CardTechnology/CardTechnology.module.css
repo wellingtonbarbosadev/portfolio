@@ -3,7 +3,6 @@
 
   border-style: solid;
 
-
   h3 {
     color: var(--purple);
     font-weight: bold;
@@ -51,3 +50,5 @@
     right: 1rem;
   }
 }
+
+

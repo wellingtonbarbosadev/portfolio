@@ -2,7 +2,7 @@ import AnimatedContent from "../ReactBits/AnimatedContent";
 import { DevCard } from "../DevCard/DevCard";
 
 import "./Hero.css";
-import { Button } from "../Button/Button";
+import { Button } from "../../shared/components/Button/Button";
 
 import fotoPerfil from "../../assets/foto.jpeg";
 import { usuario } from "../../shared/data";
