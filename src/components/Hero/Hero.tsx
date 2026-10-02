@@ -29,7 +29,7 @@ export function Hero() {
           <DevCard />
           <p className="slogan">{slogan}</p>
 
-          <section className="buttonsHero">
+          <section className="buttons">
             <Button href="#projetos" type="primario">
               ver projetos
             </Button>

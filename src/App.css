@@ -179,3 +179,15 @@ html {
     z-index: 3;
   }
 }
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @media (max-width: 800px) {
+      a {
+        flex: 1;
+      }
+    }
+  }

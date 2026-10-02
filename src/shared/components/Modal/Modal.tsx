@@ -21,7 +21,7 @@ export function Modal({
   tecnologias,
   imagens,
   linkDemo,
-  linkRepositorio
+  linkRepositorio,
 }: ModalProps) {
   // useEffect(() => {
   //   if (!open) return;
@@ -48,15 +48,18 @@ export function Modal({
           <h2>{title}</h2>
 
           <button onClick={close}>
-            <XIcon size={24}/>
+            <XIcon size={24} />
           </button>
         </header>
 
-        <div>
-          <p>{descricao}</p>
-        </div>
+        <p>{descricao}</p>
+
+        <section className="buttons">
+          <Button type="primario" link={linkDemo}>Demo</Button>
+          <Button link={linkRepositorio}>Repositório</Button>
+        </section>
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }
