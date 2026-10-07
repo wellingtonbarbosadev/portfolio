@@ -1,4 +1,3 @@
-import { type ReactNode, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import styles from "./Modal.module.css";
@@ -18,8 +17,8 @@ export function Modal({
   open,
   close,
   descricao,
-  tecnologias,
-  imagens,
+  // tecnologias,
+  // imagens,
   linkDemo,
   linkRepositorio,
 }: ModalProps) {

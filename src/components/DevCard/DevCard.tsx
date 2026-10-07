@@ -2,17 +2,15 @@ import { useEffect, useState } from "react";
 import "./DevCard.css";
 import { LINHAS } from "../../shared/data";
 
-
-
 export function DevCard() {
-  
   const [nome, setNome] = useState("");
 
   useEffect(() => {
-    const linhaNome = LINHAS.find((linha) => linha.chave === "nome");
+    let linhaNome = LINHAS.find((linha) => linha.chave === "nome")
+      ?.valor as string;
     if (!linhaNome) return;
 
-    const nomeSeparado = linhaNome.valor.split("");
+    const nomeSeparado = linhaNome.split("");
     let index = 0;
 
     let intervalId: ReturnType<typeof setInterval>;
