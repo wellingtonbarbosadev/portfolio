@@ -37,14 +37,24 @@ export function Button({
     }
   }
 
-  const internal = isInternalLink(url);
+  if (link || href) {
+    const internal = isInternalLink(url);
+    return (
+      <a
+        href={url}
+        target={internal ? "_self" : "_blank"}
+        className={`${styles.button} ${tipoBotao}`}
+        rel={internal ? undefined : "noopener noreferrer"}
+        {...rest}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <a
-      href={url}
-      target={internal ? "_self" : "_blank"}
       className={`${styles.button} ${tipoBotao}`}
-      rel={internal ? undefined : "noopener noreferrer"}
       {...rest}
     >
       {children}
