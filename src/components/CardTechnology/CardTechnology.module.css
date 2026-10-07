@@ -1,5 +1,6 @@
 .tecnologiasCard {
   position: relative;
+  height: fit-content;
 
   border-style: solid;
 
@@ -15,10 +16,11 @@
 
   .tecnologias {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.5rem;
 
-    height: 28px;
+    height: fit-content;
 
     span {
       display: flex;
@@ -28,7 +30,7 @@
       background-color: color-mix(in srgb, var(--green) 20%, transparent);
       color: var(--green);
 
-      height: 100%;
+      height: 28px;
 
       text-align: center;
 

@@ -10,6 +10,27 @@ import springBootImg from "../assets/certificados/spring-boot.png";
 import gitGithubImg from "../assets/certificados/git-github.png";
 import htmlCssB7webImg from "../assets/certificados/html-css-b7web.png";
 
+import gymLoginImg from "../assets/projetos/gym-login.png";
+import gymDashboardImg from "../assets/projetos/gym-dashboard.png";
+import gymAlunosImg from "../assets/projetos/gym-alunos.png";
+import gymFuncionariosImg from "../assets/projetos/gym-funcionarios.png";
+import gymTreinoImg from "../assets/projetos/gym-treino.png";
+
+import refundLoginImg from "../assets/projetos/refund-login.png";
+import refundEmployeeImg from "../assets/projetos/refund-employee.png";
+import refundManagerImg from "../assets/projetos/refund-manager.png";
+
+import helpdeskDashboardImg from "../assets/projetos/helpdesk-dashboard.jpg";
+import taskflowKanbanImg from "../assets/projetos/taskflow-kanban.jpg";
+import hairdayBookingImg from "../assets/projetos/hairday-booking.jpg";
+
+import portalNoticias01Img from "../assets/projetos/portal-noticias-01.png";
+import portalNoticias02Img from "../assets/projetos/portal-noticias-02.png";
+import portalNoticias03Img from "../assets/projetos/portal-noticias-03.png";
+
+import quicklistImg from "../assets/projetos/quicklist.jpg";
+import livrariaImg from "../assets/projetos/livraria.jpg";
+
 // export type Projeto = {
 //   titulo: string;
 //   descricao: string;
@@ -208,36 +229,113 @@ export const LINHAS: Linha[] = [
 
 export const projetos: ProjetoType[] = [
   {
-    title: "helpdesk",
+    title: "GymHub",
     descricaoCurta:
-      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
+      "Sistema de gestão para academias com controle de alunos, planos, mensalidades, treinos e equipe.",
     descricao:
-      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim. Permite que os usuários registrem problemas, acompanhem o status dos tickets e recebam atualizações em tempo real. O sistema também oferece recursos de gerenciamento para a equipe de suporte, incluindo atribuição de tickets, categorização e priorização.",
-    tecnologias: ["TypeScript", "Node.js"],
-    imagens: [],
+      "Sistema completo de gestão para academias com múltiplos painéis adaptados por nível de acesso (proprietário, recepção, professor e aluno). Conta com dashboard com indicadores financeiros e métricas de matrículas, cadastro e status de pagamento de alunos, gestão de funcionários e personal trainers, criação e acompanhamento de fichas de treino personalizadas e interface responsiva construída em Angular.",
+    tecnologias: ["Angular", "TypeScript", "RxJS", "Vitest"],
+    imagens: [
+      gymDashboardImg,
+      gymAlunosImg,
+      gymFuncionariosImg,
+      gymTreinoImg,
+      gymLoginImg,
+    ],
     linkDemo: "",
-    linkRepositorio: "https://github.com/wellingtonbarbosadev/helpdesk",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/gym-hub",
   },
   {
-    title: "refund-v2",
+    title: "Refund v2",
     descricaoCurta:
-      "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação.",
+      "Aplicação full stack para solicitação e aprovação de reembolsos corporativos com upload de comprovantes.",
     descricao:
-      "Sistema de solicitação e aprovação de reembolsos, do pedido até a confirmação. Permite que os usuários enviem solicitações de reembolso, anexem comprovantes e acompanhem o status do processo. A equipe responsável pode revisar as solicitações, aprovar ou rejeitar os pedidos e fornecer feedback aos solicitantes.",
-    tecnologias: ["TypeScript"],
-    imagens: [],
-    linkDemo: "",
+      "Aplicação full stack para gerenciar reembolsos corporativos com autenticação JWT e separação de acessos entre colaboradores e gestores. Conta com 6 endpoints REST, upload de comprovantes (JPEG/PNG), validação rigorosa com Zod, senhas com bcrypt, pesquisa em tempo real por nome e paginação no painel do gestor.",
+    tecnologias: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Node.js",
+      "Express",
+      "PrismaORM",
+      "SQLite",
+    ],
+    imagens: [refundManagerImg, refundEmployeeImg, refundLoginImg],
+    linkDemo: "https://devwb-projeto-refund.vercel.app",
     linkRepositorio: "https://github.com/wellingtonbarbosadev/refund-v2",
   },
   {
-    title: "helpdesk",
+    title: "Helpdesk API",
     descricaoCurta:
-      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim.",
+      "API REST para abertura e gestão de chamados de suporte técnico com controle de disponibilidade de técnicos.",
     descricao:
-      "Sistema de abertura e acompanhamento de chamados de suporte, com fluxo de tickets do início ao fim. Permite que os usuários registrem problemas, acompanhem o status dos tickets e recebam atualizações em tempo real. O sistema também oferece recursos de gerenciamento para a equipe de suporte, incluindo atribuição de tickets, categorização e priorização.",
-    tecnologias: ["TypeScript", "Node.js"],
-    imagens: [],
+      "API REST desenvolvida em Node.js e TypeScript para abertura, gestão e acompanhamento de chamados de suporte técnico. Oferece fluxo estruturado de tickets do início ao fim, controle de disponibilidade de técnicos, atribuição de chamados, modelagem relacional com Prisma ORM e tratamento de erros centralizado com AppError.",
+    tecnologias: ["Node.js", "TypeScript", "Express", "PrismaORM", "PostgreSQL"],
+    imagens: [helpdeskDashboardImg],
     linkDemo: "",
     linkRepositorio: "https://github.com/wellingtonbarbosadev/helpdesk",
+  },
+  {
+    title: "Taskflow API",
+    descricaoCurta:
+      "API REST para gerenciamento de times e tarefas corporativas com autenticação JWT e controle de papéis.",
+    descricao:
+      "API REST desenvolvida para gerenciamento de times e fluxo de trabalho corporativo. Implementa autenticação JWT, controle de acesso baseado em perfis (admin e member), CRUD completo de equipes e tarefas, histórico de movimentação de status, filtros por prioridade e ambiente configurado com Docker Compose e PostgreSQL.",
+    tecnologias: [
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "PrismaORM",
+      "PostgreSQL",
+      "Docker",
+    ],
+    imagens: [taskflowKanbanImg],
+    linkDemo: "",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/taskflow-api",
+  },
+  {
+    title: "Hair Day",
+    descricaoCurta:
+      "Aplicação web interativa para agendamento de cortes em barbearias e salões em tempo real.",
+    descricao:
+      "Aplicação interativa desenvolvida para agendamentos em barbearias e salões de beleza. Permite aos clientes selecionar datas, visualizar horários disponíveis e ocupados nos períodos manhã, tarde e noite, cadastrar cliente por atendimento e cancelar horários com persistência e manipulação avançada de datas via Day.js.",
+    tecnologias: ["JavaScript", "HTML", "CSS", "Webpack"],
+    imagens: [hairdayBookingImg],
+    linkDemo: "",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/projeto-hairday",
+  },
+  {
+    title: "Portal de Notícias",
+    descricaoCurta:
+      "Portal web moderno de notícias com layout responsivo e arquitetura avançada em CSS Grid.",
+    descricao:
+      "Portal de notícias responsivo construído com foco em semântica HTML5 e layouts complexos em CSS Grid e Flexbox. Possui manchetes principais, colunas laterais de tendências, seção de tecnologia, cards dinâmicos e adaptação fluida para dispositivos móveis e desktops.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+    imagens: [portalNoticias01Img, portalNoticias02Img, portalNoticias03Img],
+    linkDemo: "https://wellingtonbarbosadev.github.io/projeto-portal-noticias/",
+    linkRepositorio:
+      "https://github.com/wellingtonbarbosadev/projeto-portal-noticias",
+  },
+  {
+    title: "Quicklist",
+    descricaoCurta:
+      "Lista de compras inteligente com manipulação de estado, remoção e alertas interativos.",
+    descricao:
+      "Aplicação web intuitiva para gerenciamento de listas de compras no cotidiano. Desenvolvida com foco em interatividade e UX, inclui cadastro ágil de itens, marcação visual de itens comprados, exclusão com alertas temporários (toasts) e layout responsivo e acessível.",
+    tecnologias: ["JavaScript", "HTML", "CSS"],
+    imagens: [quicklistImg],
+    linkDemo: "https://projeto-quicklist-theta.vercel.app",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/projeto-quicklist",
+  },
+  {
+    title: "Sistema de Livraria",
+    descricaoCurta:
+      "Sistema em Java aplicando Orientação a Objetos para gestão de acervo, autores e empréstimos.",
+    descricao:
+      "Sistema desenvolvido em Java explorando a fundo os pilares da Programação Orientada a Objetos (encapsulamento, herança, polimorfismo e composição). Implementa regras de negócio para cadastro de autores, acervo de livros, controle de estoque e fluxo completo de empréstimos e devoluções.",
+    tecnologias: ["Java", "POO"],
+    imagens: [livrariaImg],
+    linkDemo: "",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/SistemaLivraria",
   },
 ];

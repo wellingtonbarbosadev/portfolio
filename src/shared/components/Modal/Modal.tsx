@@ -52,9 +52,14 @@ export function Modal({
           </button>
         </header>
         
-        {imagens.length !== 0 && (
+        {imagens && imagens.length > 0 && (
           <div className={styles.containerCarousel}>
             <FlexCarousel
+              items={imagens.map((img, idx) => ({
+                src: img,
+                alt: `${title} - Imagem ${idx + 1}`,
+                title: `${title} (${idx + 1}/${imagens.length})`,
+              }))}
               className={styles.carousel}
               gap={20}
               cardHeight={1}
@@ -69,10 +74,14 @@ export function Modal({
         <p>{descricao}</p>
 
         <section className="buttons">
-          <Button type="primario" link={linkDemo}>
-            Demo
-          </Button>
-          <Button link={linkRepositorio}>Repositório</Button>
+          {linkDemo ? (
+            <Button type="primario" link={linkDemo}>
+              Demo
+            </Button>
+          ) : null}
+          {linkRepositorio ? (
+            <Button link={linkRepositorio}>Repositório</Button>
+          ) : null}
         </section>
       </div>
     </div>,
