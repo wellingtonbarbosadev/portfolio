@@ -216,7 +216,7 @@ export const projetos: ProjetoType[] = [
     tecnologias: ["TypeScript", "Node.js"],
     imagens: [],
     linkDemo: "",
-    linkRepositorio: "",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/helpdesk",
   },
   {
     title: "refund-v2",
@@ -227,7 +227,7 @@ export const projetos: ProjetoType[] = [
     tecnologias: ["TypeScript"],
     imagens: [],
     linkDemo: "",
-    linkRepositorio: "",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/refund-v2",
   },
   {
     title: "helpdesk",
@@ -238,6 +238,6 @@ export const projetos: ProjetoType[] = [
     tecnologias: ["TypeScript", "Node.js"],
     imagens: [],
     linkDemo: "",
-    linkRepositorio: "",
+    linkRepositorio: "https://github.com/wellingtonbarbosadev/helpdesk",
   },
 ];

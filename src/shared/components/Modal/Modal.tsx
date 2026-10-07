@@ -5,6 +5,7 @@ import styles from "./Modal.module.css";
 import { Button } from "../Button/Button";
 import { XIcon } from "lucide-react";
 import type { ProjetoType } from "../../data";
+import FlexCarousel from "../../../components/ReactBits/FlexCarousel";
 
 type ModalProps = ProjetoType & {
   title: string;
@@ -18,7 +19,7 @@ export function Modal({
   close,
   descricao,
   // tecnologias,
-  // imagens,
+  imagens,
   linkDemo,
   linkRepositorio,
 }: ModalProps) {
@@ -50,11 +51,27 @@ export function Modal({
             <XIcon size={24} />
           </button>
         </header>
+        
+        {imagens.length !== 0 && (
+          <div className={styles.containerCarousel}>
+            <FlexCarousel
+              className={styles.carousel}
+              gap={20}
+              cardHeight={1}
+              radius={14}
+              fit="landscape"
+              autoplay={true}
+              bend={0}
+            ></FlexCarousel>
+          </div>
+        )}
 
         <p>{descricao}</p>
 
         <section className="buttons">
-          <Button type="primario" link={linkDemo}>Demo</Button>
+          <Button type="primario" link={linkDemo}>
+            Demo
+          </Button>
           <Button link={linkRepositorio}>Repositório</Button>
         </section>
       </div>

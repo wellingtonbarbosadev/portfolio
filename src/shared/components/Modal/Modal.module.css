@@ -36,3 +36,12 @@
     margin-block: 1rem;
   }
 }
+
+
+.containerCarousel {
+  margin-block: 1.5rem 5rem;
+
+  .carousel {
+    overflow: visible;
+  }
+}
