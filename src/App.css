@@ -156,6 +156,8 @@ html {
 
   font-family: "JetBrains Mono", monospace;
 
+  min-height: 360px;
+  height: 100%;
   gap: 0.5rem;
   transition: all 0.3s ease;
 

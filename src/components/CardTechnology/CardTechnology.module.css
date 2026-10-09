@@ -18,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: auto;
     gap: 0.5rem;
 
     height: fit-content;
