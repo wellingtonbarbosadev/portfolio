@@ -581,6 +581,7 @@ const FlexCarousel = ({
     };
 
     const step = (m, delta) => {
+      if (m.centers.length < 2) return;
       let at = snapPoint(m, goal);
       let index = nearest(m, at);
       const n = m.centers.length;
@@ -600,6 +601,7 @@ const FlexCarousel = ({
     };
 
     const goTo = (m, index) => {
+      if (m.centers.length < 2) return;
       const i = ((index % m.centers.length) + m.centers.length) % m.centers.length;
       goal = goal + wrap(m.centers[i] - goal, m.loop);
       mode = 'spring';
@@ -794,6 +796,7 @@ const FlexCarousel = ({
 
       if (
         s.autoplay &&
+        n > 1 &&
         !reducedMotion &&
         introState.done &&
         focus.target === 0 &&
@@ -809,7 +812,7 @@ const FlexCarousel = ({
         autoplayAt = now;
         step(m, 1);
       }
-      if (s.autoplay && !reducedMotion) animating = true;
+      if (s.autoplay && n > 1 && !reducedMotion) animating = true;
 
       const travel = Math.abs(pos - lastPos) / dt;
       lastPos = pos;
@@ -890,10 +893,12 @@ const FlexCarousel = ({
         cardProgram.uniforms.uRadius.value = s.radius;
         const shrink = 1 - clamp01(s.squeeze) * energy;
         const draws = [];
+        const repeatStart = n === 1 ? 0 : -3;
+        const repeatEnd = n === 1 ? 0 : 3;
         for (let i = 0; i < n; i++) {
           const w = m.widths[i];
           const baseRel = wrap(m.centers[i] - pos, m.loop);
-          for (let k = -3; k <= 3; k++) {
+          for (let k = repeatStart; k <= repeatEnd; k++) {
             const rel = baseRel + k * m.loop;
             if (Math.abs(rel) - w / 2 > width + 40) continue;
             const fx = effects.card ? effects.card(rel) : null;
@@ -1021,6 +1026,11 @@ const FlexCarousel = ({
       pointer.x = x;
       pointer.y = y;
       pointer.over = true;
+      if (slots.length === 1) {
+        dirty = true;
+        start();
+        return;
+      }
       if (pointer.down && e.pointerId === pointer.id) {
         const dx = x - pointer.startX;
         const dy = y - pointer.startY;
@@ -1117,6 +1127,7 @@ const FlexCarousel = ({
     const onWheel = e => {
       const s = settingsRef.current;
       if (!s || e.ctrlKey) return;
+      if (slots.length === 1) return;
       let dx = e.deltaX;
       let dy = e.deltaY;
       if (e.shiftKey && Math.abs(dx) < Math.abs(dy)) {
@@ -1140,6 +1151,18 @@ const FlexCarousel = ({
     const onKeyDown = e => {
       const s = settingsRef.current;
       if (!s) return;
+      if (
+        slots.length === 1 &&
+        (e.key === 'ArrowRight' ||
+          e.key === 'ArrowDown' ||
+          e.key === 'ArrowLeft' ||
+          e.key === 'ArrowUp' ||
+          e.key === 'Home' ||
+          e.key === 'End')
+      ) {
+        e.preventDefault();
+        return;
+      }
       const m = metrics(s);
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
         e.preventDefault();
